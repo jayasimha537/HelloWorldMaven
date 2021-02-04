@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World - from test1'
+                echo 'Hello World - from test11'
                 sh 'printenv'
             }
         }
