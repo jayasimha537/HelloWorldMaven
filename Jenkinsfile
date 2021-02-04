@@ -4,8 +4,15 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World - from test11'
-                sh 'printenv'
+                if (env.GIT_BRANCH == 'origin/master' && env.ghprbSourceBranch == null ) { 
+                    echo "Something changed in master branch"
+                }
+                
+                if  (env.ghprbSourceBranch != null ) { 
+                    echo "PR has been raised"
+                    echo "Soruce branch: ${env.ghprbSourceBranch}"
+                }
+                
             }
         }
     }
