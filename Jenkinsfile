@@ -7,7 +7,7 @@ pipeline {
                 sh 'printenv'
                 echo "Hai Jay"
                 script { 
-                    if (env.BRANCH_NAME == 'master' ) {
+                    if (env.GIT_BRANCH == 'origin/master' ) {
                         echo 'Something changed in master'
                             } 
                         }
