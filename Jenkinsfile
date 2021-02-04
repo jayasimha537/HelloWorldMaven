@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 srcipt{
-                sh printenv
+                sh 'printenv'
                 echo "Hai Jay"
                 }
             }
