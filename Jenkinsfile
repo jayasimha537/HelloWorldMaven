@@ -5,15 +5,9 @@ pipeline {
         stage('Hello') {
             steps {
                 srcipt{
-                if (env.GIT_BRANCH == 'origin/master' && env.ghprbSourceBranch == null ) { 
+                if (env.GIT_BRANCH == 'origin/master' ) { 
                     echo "Something changed in master branch"
                 }
-                
-                if  (env.ghprbSourceBranch != null ) { 
-                    echo "PR has been raised"
-                    echo "Soruce branch: ${env.ghprbSourceBranch}"
-                }
-                
                 echo "Hai Jay"
                 }
             }
