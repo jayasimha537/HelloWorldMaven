@@ -13,6 +13,7 @@ pipeline {
                     echo "Soruce branch: ${env.ghprbSourceBranch}"
                 }
                 
+                echo "Hai Jay"
             }
         }
     }
