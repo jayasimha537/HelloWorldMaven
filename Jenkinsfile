@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                srcipt{
                 if (env.GIT_BRANCH == 'origin/master' && env.ghprbSourceBranch == null ) { 
                     echo "Something changed in master branch"
                 }
@@ -14,6 +15,7 @@ pipeline {
                 }
                 
                 echo "Hai Jay"
+                }
             }
         }
     }
