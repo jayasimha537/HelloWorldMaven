@@ -5,9 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 srcipt{
-                if (env.GIT_BRANCH == 'origin/master' ) { 
-                    echo "Something changed in master branch"
-                }
+                sh printenv
                 echo "Hai Jay"
                 }
             }
