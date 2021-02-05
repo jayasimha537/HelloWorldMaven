@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 
-                echo "x=100"
+                echo "x=101"
                 script { 
                     if (env.GIT_BRANCH == 'origin/master' && env.ghprbSourceBranch == null ) {
                                 echo 'Something changed in master'
