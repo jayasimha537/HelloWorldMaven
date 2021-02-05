@@ -11,6 +11,7 @@ pipeline {
                             }
                     if (env.GIT_BRANCH == 'origin/master' && env.ghprbSourceBranch != null ) {
                         echo "PR has been raised from ${env.ghprbSourceBranch}"
+                        echo "x=100"
                             } 
                         }
             }
